@@ -7,7 +7,7 @@ import 'materialize-css/dist/css/materialize.min.css'
 import VueRouter from "vue-router"
 
 import Home from "./pages/Home"
-import Article from "./pages/Article"
+import Articles from "./pages/Articles"
 import Register from "./pages/Register"
 import Login from "./pages/Login"
 
@@ -16,7 +16,7 @@ Vue.config.productionTip = false
 
 const routes = [
   { path: "/", component: Home },
-  { path: "/articles", component: Article },
+  { path: "/articles", component: Articles },
   { path: "/login", component: Login},
   { path: "/register", component: Register },
 ];

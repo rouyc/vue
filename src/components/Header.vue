@@ -1,31 +1,27 @@
 <template>
-  <nav>
-    <div class="nav-wrapper">
-      <ul id="nav-mobile" class="left hide-on-med-and-down">
-        <li>
-          <router-link to="/"> Home</router-link>
-        </li>
-        <li>
-          <router-link to="/articles"> Articles</router-link>
-        </li>
-      </ul>
-      <ul id="nav-mobile1" class="right hide-on-med-and-down">
-        <li>
-          <router-link to="/register"> Register</router-link>
-        </li>
-        <li>
-          <router-link to="/login"> Login</router-link>
-        </li>
-      </ul>
-    </div>
-  </nav>
-<!--  <div>
-    Je suis le header
-    <router-link to="/"> Home</router-link>
-    <router-link to="/articles"> Articles</router-link>
-    <router-link to="/register"> Register</router-link>
-    <router-link to="/login"> Login</router-link>
-  </div>-->
+  <header>
+    <nav class="blue darken-4">
+      <div class="nav-wrapper">
+        <ul class="left hide-on-med-and-down">
+          <li>
+            <router-link to="/"> Accueil</router-link>
+          </li>
+          <li>
+            <router-link to="/articles"> Articles</router-link>
+          </li>
+        </ul>
+        <ul class="right hide-on-med-and-down">
+          <li>
+            <router-link to="/register"> Inscription</router-link>
+          </li>
+          <li>
+            <router-link to="/login"> Connexion</router-link>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
 </template>
 
 <script>
@@ -35,4 +31,8 @@ export default {
 </script>
 
 <style>
+nav {
+  color: black;
+  background-color: #163172;
+}
 </style>

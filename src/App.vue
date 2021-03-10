@@ -1,19 +1,21 @@
 <template>
   <div id="app">
-    <Menu />
+    <Header />
     <router-view> </router-view>
-
+    <Footer />
   </div>
 </template>
 
 <script>
 import Header from './components/Header.vue'
+import Footer from './components/Footer.vue'
 
 
 export default {
   name: 'App',
   components: {
-    Menu: Header,
+    Header,
+    Footer
   }
 }
 </script>
@@ -25,5 +27,7 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  background-color: #d6e4f0;
 }
+
 </style>
