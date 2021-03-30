@@ -16,6 +16,9 @@ export default {
     Header,
     Footer
   },
+  created() {
+    this.articles = this.$store.state.articles;
+  }
 }
 </script>
 

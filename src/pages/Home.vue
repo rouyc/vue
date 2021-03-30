@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <p> Projet node et vue </p>
+    <p> Projet Node | Vue ROUY Clément et BEC Pierre </p>
   </div>
 </template>
 
@@ -11,4 +11,7 @@ export default {
 </script>
 
 <style>
+.container{
+  margin-bottom: 250px;
+}
 </style>
