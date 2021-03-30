@@ -35,18 +35,24 @@ export default {
   },
   methods: {
     submit() {
-      const data = {email: this.email, password: this.password}
-      console.log(data)
+      const bodyFormData = new URLSearchParams();
+      bodyFormData.append("email", this.email);
+      bodyFormData.append("password", this.password);
+
       axios
           .post(
               "https://projet-node-rouy.herokuapp.com/login",
-              {email: this.email, password: this.password},
+              bodyFormData,
               {'Content-Type': 'application/x-www-form-urlencoded'})
           .then(response => {
-            console.log(response.data)
-            this.$router.push("/")
+            this.$store.dispatch("setId", response.data.id)
+            this.$store.dispatch("setJWT", response.data.jwt)
+            this.$router.push({ name: 'myarticle' });
           })
-          .catch(error => console.log(error));
+          .catch(error => {
+            console.log(error)
+            alert(`Error: ${error}`);
+          });
     }
   }
 };

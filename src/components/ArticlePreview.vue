@@ -3,19 +3,27 @@
     <div class="card bluePerso" >
       <div class="card-content white-text">
         <span class="card-title">{{ titreArticle }}</span>
-        <p>{{ contenuArticle }}</p>
+        <button class="btn waves-effect waves-light" type="submit" name="action" v-on:click="article">Voir plus
+        </button>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+
 export default {
-  name: "Article",
+  name: "ArticlePreview",
   props: {
     idArticle: Number,
     titreArticle: String,
-    contenuArticle: String
+    contenuArticle: String,
+    idUser : Number,
+  },
+  methods: {
+    article() {
+      this.$router.push({ path: `/article/${this.idArticle}` });
+    }
   }
 }
 </script>

@@ -46,17 +46,26 @@ export default {
   },
   methods: {
     submit() {
-      const data = {prenom: this.prenom, nom: this.nom, email: this.email, password: this.password}
-      console.log(data)
+      const bodyFormData = new URLSearchParams();
+      bodyFormData.append("nom", this.nom);
+      bodyFormData.append("prenom", this.prenom);
+      bodyFormData.append("email", this.email);
+      bodyFormData.append("password", this.password);
+
       axios
           .post(
               "https://projet-node-rouy.herokuapp.com/register",
-              {prenom: this.prenom, nom: this.nom, email: this.email, password: this.password},
+              bodyFormData,
               {'Content-Type': 'application/x-www-form-urlencoded'})
           .then(response => {
-            console.log(response.data)
+            console.log(response)
+            alert("Compte crée");
+            this.$router.push({ name: 'login' });
           })
-          .catch(error => console.log(error));
+          .catch(error => {
+            console.log(error)
+            alert("Problème a la création du compte");
+          });
     }
   }
 };

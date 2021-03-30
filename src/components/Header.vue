@@ -10,12 +10,17 @@
             <router-link to="/articles"> Articles</router-link>
           </li>
         </ul>
-        <ul class="right hide-on-med-and-down">
+        <ul class="right hide-on-med-and-down" v-if='this.$store.state.jwt == ""'>
           <li>
             <router-link to="/register"> Inscription</router-link>
           </li>
           <li>
             <router-link to="/login"> Connexion</router-link>
+          </li>
+        </ul>
+        <ul class="right hide-on-med-and-down" v-if='this.$store.state.jwt != ""'>
+          <li>
+            <router-link to="/my-articles"> Gestion de mes articles</router-link>
           </li>
         </ul>
       </div>
