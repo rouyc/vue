@@ -36,5 +36,6 @@ img{
   height: 75px;
   margin-left: 50px;
   margin-right: 50px;
+  margin-top: 500px;
 }
 </style>

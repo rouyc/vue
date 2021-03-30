@@ -1,5 +1,6 @@
 <template>
-  <div>
+  <div class="container">
+    <p> Projet node et vue </p>
   </div>
 </template>
 
