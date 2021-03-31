@@ -23,7 +23,6 @@ export default {
     };
   },
   created() {
-    this.$store.commit("loadArticles");
     this.articles = this.$store.state.articles;
   }
 };
